@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter", sans-serif;
+
+  --color-vig-purple: #d4bdff;
+  --color-vig-blue: #c8e3f9;
+  --color-vig-yellow: #ffee7d;
+  --color-vig-gray: #f8f9fa;
+  --color-vig-black: #000000;
+  --color-vig-white: #ffffff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-vig-black bg-vig-white antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-extrabold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .tag {
+    @apply text-[11px] font-bold uppercase tracking-[1px] text-gray-500 mb-2 block;
+  }
+  .utility-card {
+    @apply bg-white border border-gray-100 rounded-[16px] p-4;
+  }
+  .hero-gradient {
+    @apply bg-gradient-to-br from-vig-purple to-vig-blue;
+  }
+  .soft-shadow {
+    @apply shadow-[0_10px_30px_rgba(212,189,255,0.2)];
+  }
+}
